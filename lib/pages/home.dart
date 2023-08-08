@@ -342,6 +342,9 @@ Widget feed(String image) {
                 width: 10.0,
               ),
               const Text('5559 likes'),
+              const SizedBox(
+                width: 10.0,
+              ),
               const Expanded(
                 child: TextField(
                   decoration: InputDecoration(
