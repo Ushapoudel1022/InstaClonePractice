@@ -15,7 +15,8 @@ class UserHome extends StatelessWidget {
           children: [
             Text(
               "Instagram",
-              style: TextStyle(fontFamily: 'PTSans', color: Colors.black),
+              style: TextStyle(
+                  fontFamily: 'Billabong', fontSize: 40, color: Colors.black),
             ),
             Row(
               children: [
@@ -142,17 +143,17 @@ List<User> userList = [
 
       body: ListView(
         children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[],
-                ),
-              ],
-            ),
-          ),
+          // const Padding(
+          //   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: <Widget>[
+          //       Row(
+          //         children: <Widget>[],
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Container(
             padding: const EdgeInsets.only(left: 15),
             height: 122,
@@ -333,9 +334,7 @@ Widget feed(String image) {
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage('assets/images/user1.png')
-                      // image: NetworkImage(dummyStoryData[index].profilepic)
-                      ),
+                      image: AssetImage('assets/images/user1.png')),
                 ),
               ),
               const SizedBox(
