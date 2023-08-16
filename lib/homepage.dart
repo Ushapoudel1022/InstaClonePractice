@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insta_app/pages/home.dart';
+// import 'package:insta_app/pages/home.dart';
 import 'package:insta_app/pages/profile.dart';
 // import 'package:insta_app/pages/profile.dart';
 // import 'package:insta_app/pages/search.dart';
@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _children = [
-    const UserHome(),
+    // const UserHome(),
     // UserSearch(),
 
     const Center(child: Text('Shop')),
