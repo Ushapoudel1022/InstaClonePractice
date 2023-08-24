@@ -55,7 +55,7 @@ class InstaScreen extends StatelessWidget {
                         itemCount: state.userInstaData.length,
                         itemBuilder: (context, index) => Container(
                               margin: const EdgeInsets.symmetric(vertical: 12),
-                              child: Text(state.userInstaData[index.name]),
+                              child: Text(state.userInstaData[index].name),
                             )),
                   ),
                 ],

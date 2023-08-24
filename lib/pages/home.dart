@@ -437,7 +437,6 @@ Widget feed(String image, name) {
                   SizedBox(
                     width: 10,
                   ),
-                  // Icon(FontAwesomeIcons.solidComment,size:31),
                   SizedBox(
                     width: 12,
                   ),
@@ -445,7 +444,6 @@ Widget feed(String image, name) {
                   SizedBox(
                     width: 10,
                   ),
-
                   Icon(Icons.send, size: 31),
                 ],
               ),

@@ -20,7 +20,7 @@ class InstaBloc extends Bloc<InstaEvent, InstaState> {
       log("completed");
       final userInstaData = List.generate(
         2,
-        (index) => UserModel(name: "name$index", email: "email$index"),
+        (index) => UserPost(name: "name$index", email: "email$index"),
       );
       // emit(InstaLoaded());
       emit(
@@ -32,9 +32,9 @@ class InstaBloc extends Bloc<InstaEvent, InstaState> {
   }
 }
 
-class UserModel {
+class UserPost {
   final String name;
   final String email;
 
-  UserModel({required this.name, required this.email});
+  UserPost({required this.name, required this.email});
 }
