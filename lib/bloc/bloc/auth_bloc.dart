@@ -37,21 +37,25 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       );
       // final userdata = await _sharedPreferences.getUserData();
       // log(userdata[0]);
-      emit(AuthSucess());
+      emit(AuthSucess(email: ""));
     }
   }
 
   Future<void> _signupwithgoogle(
       AuthSignUpWithGoogleRequested event, Emitter emit) async {
     emit(AuthLoading());
-    UserCredential response =
-        await _firebaseAuth.createUserWithEmailAndPassword(
-            email: emailController.text, password: passwordController.text);
-    if (response.user?.uid != null) {
-      await _sharedPreferences.saveUserData(
-        email: response.user?.email ?? '',
-        id: response.user?.uid ?? '',
-      );
+    try {
+      final response = await _firebaseAuth.signInWithEmailAndPassword(
+          email: emailController.text, password: passwordController.text);
+
+      if (response.user?.uid != null) {
+        await _sharedPreferences.saveUserData(
+          email: response.user?.email ?? '',
+          id: response.user?.uid ?? '',
+        );
+      }
+    } catch (e) {
+      emit(AuthFailure(error: "signup Failed $e"));
     }
   }
 

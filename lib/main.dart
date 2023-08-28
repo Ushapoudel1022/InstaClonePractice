@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
       //   child: const SignUp(),
       // ),
       home: BlocProvider(
-        create: (context) => HomeBloc(),
+        create: (context) => HomeBloc()..add(HomeAddPostRequested()),
         child: const Home(),
       ),
       // ),
